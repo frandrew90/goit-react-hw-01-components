@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import Profile from './profile/Profile';
 
 const App = () => {
-  return <h2>Hello</h2>;
+  return <Profile />;
 };
 
 export default App;
