@@ -1,0 +1,26 @@
+.transactionHistory {
+  border: solid 1px black;
+
+  width: 50%;
+
+  margin: 30px;
+  background: gray;
+}
+
+.tableHead {
+  border-bottom: solid 1px black;
+  background: lightgray;
+  font-size: 18px;
+}
+
+.tableBody {
+  text-align: center;
+}
+
+.rows:nth-child(2n) {
+  background: lightgray;
+}
+
+.rows:nth-child(2n-1) {
+  background: lightgray;
+}
