@@ -1,16 +1,12 @@
 import React from 'react';
 
 const FriendListItem = ({ friend }) => {
+  const { isOnline, avatar, name } = friend;
   return (
     <li className="item">
-      <span className="status">{friend.isOnline}</span>
-      <img
-        className="avatar"
-        src={friend.avatar}
-        alt={friend.name}
-        width="48"
-      />
-      <p className="name">{friend.name}</p>
+      <span className="status">{isOnline}</span>
+      <img className="avatar" src={avatar} alt={name} width="48" />
+      <p className="name">{name}</p>
     </li>
   );
 };

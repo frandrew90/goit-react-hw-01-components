@@ -1,13 +1,13 @@
 import React from 'react';
-import data from '../../data';
+// import data from '../../data';
 
-const StatisticalData = () => {
+const StatisticalData = ({ statData, title }) => {
   return (
     <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+      {title && <h2 className="title"> {title}</h2>}
 
       <ul className="stat-list">
-        {data.statisticalData.map(stat => {
+        {statData.map(stat => {
           return (
             <li className="item" key={stat.id}>
               <span className="label">{stat.label}</span>
