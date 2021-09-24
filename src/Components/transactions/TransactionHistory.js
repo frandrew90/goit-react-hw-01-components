@@ -1,5 +1,6 @@
 import React from 'react';
 // import data from '../../data';
+import PropTypes from 'prop-types';
 
 const TransactionHistory = ({ transactions }) => {
   return (
@@ -14,17 +15,22 @@ const TransactionHistory = ({ transactions }) => {
 
       <tbody>
         {transactions.map(transaction => {
+          const { id, type, amount, currency } = transaction;
           return (
-            <tr key={transaction.id}>
-              <td>{transaction.type}</td>
-              <td>{transaction.amount}</td>
-              <td>{transaction.currency}</td>
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
             </tr>
           );
         })}
       </tbody>
     </table>
   );
+};
+
+TransactionHistory.propTypes = {
+  transactions: PropTypes.array.isRequired,
 };
 
 export default TransactionHistory;
